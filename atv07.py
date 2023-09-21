@@ -1,3 +1,5 @@
+# lista vazia; apenas apertar enter; float ou diferentes de int
+
 def inserir():
     n1 = int(input('Adicione um número à pilha: '))
     return lista01.append(n1)
