@@ -1,3 +1,6 @@
+# Nicolas Herculano Ariston Rodrigues da Silva: 23207279
+# Vitor Santolin: 23200422
+
 matriz = []
 opcao = 0
 
@@ -5,20 +8,20 @@ for linha in range(11):
     matriz = matriz + [[0.0] * 11]
 
 matriz[0][0] = 'ALUNO'
-matriz[1][0] = 'Vitor'
-matriz[2][0] = 'Nicko'
-matriz[3][0] = 'Vinni'
-matriz[4][0] = 'Frodo'
-matriz[5][0] = 'Marco'
-matriz[6][0] = 'Júlia'
-matriz[7][0] = 'Pedro'
-matriz[8][0] = 'Maria'
-matriz[9][0] = 'Rambo'
-matriz[10][0] = 'Paola'
+matriz[1][0] = 'Vitor | '
+matriz[2][0] = 'Nicko | '
+matriz[3][0] = 'Vinni | '
+matriz[4][0] = 'Frodo | '
+matriz[5][0] = 'Marco | '
+matriz[6][0] = 'Júlia | '
+matriz[7][0] = 'Pedro | '
+matriz[8][0] = 'Maria | '
+matriz[9][0] = 'Rambo | '
+matriz[10][0] = 'Paola | '
 
-matriz[0][1] = 'Aval1'
-matriz[0][2] = 'Aval2'
-matriz[0][3] = 'Aval3'
+matriz[0][1] = '1° Nota'
+matriz[0][2] = '2° Nota'
+matriz[0][3] = '3° Nota'
 matriz[0][4] = 'Média'
 
 linha = 0
@@ -27,8 +30,7 @@ while linha < 11:
 
     coluna = 0
     while coluna < 5:
-
-        print(format(matriz[linha][coluna]), end = '    ')
+        print('{:^6}'.format(matriz[linha][coluna]), end='      ')
         coluna += 1
 
     print()
@@ -37,7 +39,6 @@ while linha < 11:
 while opcao != 3:
 
     if opcao < 1 and opcao != 0 or opcao > 3:
-
         opcao = int(input('Digite apenas valores permitidos!\n'))
 
     opcao = int(input('\n\n'
@@ -81,4 +82,4 @@ while opcao != 3:
             linha += 1
 
     for linha in range(1, 11):
-        matriz[linha][4] = (matriz[linha][1] + matriz[linha][2] + matriz[linha][3]) / 3
+        matriz[linha][4] = round((matriz[linha][1] + matriz[linha][2] + matriz[linha][3]) / 3, 1)
